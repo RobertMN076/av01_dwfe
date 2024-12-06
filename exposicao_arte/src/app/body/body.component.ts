@@ -5,7 +5,6 @@ import { DrawsComponent } from "../draws/draws.component";
 import { Poetry } from '../../models/poetry';
 import { NgFor } from '@angular/common';
 import { Draw } from '../../models/draws';
-import { style } from '@angular/animations';
 @Component({
   selector: 'app-body',
   standalone: true,
@@ -15,7 +14,7 @@ import { style } from '@angular/animations';
 })
 export class BodyComponent {
   buttonText: string = 'white'
-  buttonColor: string = '#181414'
+  buttonColor: string = '#009d94'
   poetrys : Poetry[] = [
     new Poetry('/uma_conversa.jpeg', 'Poesias'),
     new Poetry('/molhados.jpeg', 'Poesias'),
@@ -34,14 +33,14 @@ export class BodyComponent {
   ]
 
   mouseOnButton() {
-    if(this.buttonColor === '#181414'){
-      this.buttonColor = "#009d94"
+    if(this.buttonColor === '#009d94'){
+      this.buttonColor = "#006661"
     }
   }
 
   mouseOutButton() {
-    if(this.buttonColor === '#009d94'){
-      this.buttonColor = '#181414'
+    if(this.buttonColor === '#006661'){
+      this.buttonColor = '#009d94'
     }
   }
 }

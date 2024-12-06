@@ -2,19 +2,12 @@
   <div class="row justify-content-md-center">
     <div class="col-12 col-md-12">
       <div class="card mb-5">
-        <div class="card-header text-white">
+        <div class="card-header text-white d-flex align-items-start justify-content-between">
           <h5>Sobre Mim</h5>
+          <button type="button" class="btn"(click)="toggleInfo()"[style.color]="colorText" [style.backgroundColor]="corDoBotao"(mouseover)="mousePorCima()" (mouseleave)="mouseSaiu()">Mostrar Infos</button>
         </div>
-        <div class="card-body">
-          <p class="mb-1" [style.color]="colorText">Olá, me chamo Robert, tenho 22 anos e não faz muito tempo que comecei a escrever
-            poesias. Me aproximei da escrita em 2018, mas em 2019 que realmente passei a amar a arte da poesia, desde
-            então isso se tornou parte de mim e não me vejo vivendo sem a escrita. Eu geralmente escrevia sobre
-            contextos e sentimentos pessoais meus, porém com o passar do tempo fui conseguindo colocar no papel tudo que
-            me rodeava, abrangendo meus horizontes de escrita e aprimorando minha capacidade de captar emoções e
-            contextos de pessoas alheias. Atualmente eu estudo programação, mais especificamente faço TSI (Tecnologia em
-            Sistemas para Internet), como sendo uma ferramenta de extensão para minha criatividade. Sou completamente
-            apaixonado por criar coisas e de estar em âmbitos onde minha criatividade possa ser explorada livremente.
-          </p>
+        <div class="card-body" *ngIf="showInfo">
+          <p class="mb-1" [style.color]="colorText">{{infoText}}</p>
         </div>
       </div>
     </div>

@@ -6,3 +6,7 @@
 .card-header{
     border-bottom-color: var(--primary-color) !important;
 }
+
+h5{
+    padding-top: 5px;
+}
