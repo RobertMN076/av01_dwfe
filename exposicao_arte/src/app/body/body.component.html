@@ -1,5 +1,25 @@
 <app-about-me></app-about-me>
 <br>
-<app-poetry></app-poetry>
+<div class="container text-light col-md-1">
+    <h3>Poesias</h3>
+    <hr style="color: var(--primary-color) !important;">
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div *ngFor="let poetry of poetrys; let i = index" class="col-md-4">
+            <app-poetry [poetry]="poetry"></app-poetry>
+        </div>
+    </div>
+</div>
+<div class="container text-light col-md-1">
+    <h3>Desenhos</h3>
+    <hr style="color: var(--primary-color) !important;">
+</div>
 <br>
-<app-draws></app-draws>
+<div class="container">
+    <div class="row justify-content-center">
+        <div *ngFor="let draw of draws; let i = index" class="col-md-4">
+            <app-draws [draw]="draw"></app-draws>
+        </div>
+    </div>
+</div>
